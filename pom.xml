@@ -27,6 +27,7 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -38,19 +39,37 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
             </plugin>
+
             <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-jar-plugin</artifactId>
-    <version>3.4.2</version>
-    <configuration>
-        <archive>
-            <manifest>
-                <mainClass>com.waterquality.WaterQualityAnalyzer</mainClass>
-            </manifest>
-        </archive>
-    </configuration>
-</plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.waterquality.WaterQualityAnalyzer</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.12.1</version>
+            </plugin>
+
         </plugins>
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.6.2</version>
+            </plugin>
+        </plugins>
+    </reporting>
 
 </project>
